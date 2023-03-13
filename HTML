@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Item Name & Description Generator</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<header>
+		<h1>Item Name &amp; Description Generator</h1>
+	</header>
+	<main>
+		<form>
+			<h2>Select Cuisine:</h2>
+			<nav>
+				<label><input type="radio" name="cuisine" value="Chinese">Chinese</label>
+				<label><input type="radio" name="cuisine" value="Indian">Indian</label>
+				<label><input type="radio" name="cuisine" value="Fish and Chips">Fish and Chips</label>
+				<label><input type="radio" name="cuisine" value="Pizza">Pizza</label>
+				<label><input type="radio" name="cuisine" value="Kebab">Kebab</label>
+				<label><input type="radio" name="cuisine" value="Thai">Thai</label>
+				<label><input type="radio" name="cuisine" value="Chicken">Chicken</label>
+				<label><input type="radio" name="cuisine" value="Burgers">Burgers</label>
+				<label><input type="radio" name="cuisine" value="Other">Other</label>
+			</nav>
+			<div class="category-container">
+				<h2>Category:</h2>
+				<input type="text" id="category-input" placeholder="Enter category (e.g. Appetizer, Main Course, Dessert)" style="width: 400px;">
+			</div>
+			<div class="ingredient-container">
+				<h2 for="ingredient-input">Ingredients:</h2>
+				<input type="text" id="ingredient-input" placeholder="Enter your ingredients here (e.g. chicken, broccoli, garlic)" style="width: 400px;">
+			</div>
+			<div class="tone-container">
+				<label for="tone-select">Tone of Voice/Style:</label>
+				<select id="tone-select">
+					<option value="Formal">Formal</option>
+					<option value="Playful">Playful</option>
+					<option value="Descriptive">Descriptive</option>
+					<option value="Persuasive">Persuasive</option>
+					<option value="Conversational">Conversational</option>
+					<option value="Minimalistic">Minimalistic</option>
+				</select>
+			</div>
+			<div class="other-cuisine-container" style="display: none;">
+				<label for="other-cuisine-input">Enter Cuisine:</label>
+				<input type="text" id="other-cuisine-input" placeholder="Enter the cuisine here" style="width: 400px;">
+			</div>
+			<button type="button" id="generate-button">Generate Item Name &amp; Description</button>
+		</form>
+		<div id="output-container">
+			<h2 id="output-title"></h2>
+			<p id="output-description"></p>
+		</div>
+	</main>
+	<footer>
+		<!-- Footer content goes here -->
+	</footer>
+	<!-- JavaScript -->
+	<script src="https://cdn.jsdelivr.net/npm/@openai/api@0.6.3/dist/openai-api.min.js"></script>
+	<script src="script.js"></script>
+</body>
+</html>
